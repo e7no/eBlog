@@ -5,14 +5,14 @@
 # Site
 title: Eno's blog
 subtitle: 
-description: 面向对象编程?没有对象编毛程.
+description: 面向对象编程?没有对象编毛程
 author: Eno
 language: zh-Hans
 timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://e7no.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -70,5 +70,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/e7no/e7no.github.io.git
+  repo: https://github.com/e7no/eBlog.git
   branch: master
