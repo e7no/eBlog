@@ -21,7 +21,7 @@
     {% if page.type === "tags" %}
       <div class="tag-cloud">
         <div class="tag-cloud-tags">
-          {{ tagcloud({min_font: 16, max_font: 36, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
+          {{ tagcloud({min_font: 18, max_font: 18, amount: 200, color: true, start_color: '#ccc', end_color: '#ccc'}) }}
         </div>
       </div>
     {% elif page.type === 'categories' %}

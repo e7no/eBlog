@@ -113,7 +113,7 @@ font:
   logo:
     external: true
     family:
-    size:
+    size: 26px
 
   # Font settings for <code> and code blocks.
   codes:

@@ -10,7 +10,7 @@
 
   <section id="posts" class="posts-collapse">
     <span class="archive-move-on"></span>
-   
+
     {% for post in page.posts %}
 
       {# Show year #}
