@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "e7no,e7no.com,个人博客,柒诺工作室,曹阳洋,Eno"
@@ -28,7 +28,7 @@ copyright: false
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -201,12 +201,19 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: 工具/软件/系统类书签分享
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: 
-
+links: 
+  MSDN: http://www.itellyou.cn/
+  ddAPI: http://devdocs.io/
+  代码工具: http://tool.lu/
+  在线工具: http://tool.oschina.net/
+  图片压缩: https://tinypng.com/
+  注册码: http://idea.goxz.gq/
+  iconfont: http://www.iconfont.cn/
+  dryicons: http://dryicons.com/
+  
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -448,6 +455,9 @@ local_search:
 # Alias: {% extlink text url "title" %}
 exturl: false
 
+#reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /images/wechat.jpg
+#alipay: /images/alipay.jpg
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
