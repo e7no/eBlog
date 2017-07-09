@@ -6,7 +6,7 @@
 favicon: images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "e7no,e7no.com,个人博客,柒诺工作室,曹阳洋,Eno"
+keywords: "e7no|曹阳洋|Eno|曹阳洋的个人博客|柒诺工作室"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "e7no,e7no.com,个人博客,柒诺工作室,曹阳洋,Eno"
 rss:
 
 # Specify the date when the site was setup
-#since: 2016
+#since: 2015
 
 # icon between year and author @Footer
 authoricon: heart
@@ -25,9 +25,7 @@ copyright: false
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
-# Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://e.e7no.com )
-url: http://e.e7no.com
-
+# Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
@@ -121,7 +119,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
     size:
 
 
@@ -208,14 +206,12 @@ sidebar:
 links_title: 工具/软件/系统类书签分享
 #links_layout: block
 #links_layout: inline
-links: 
+links:
   MSDN: http://www.itellyou.cn/
   ddAPI: http://devdocs.io/
   代码工具: http://tool.lu/
   在线工具: http://tool.oschina.net/
   图片压缩: https://tinypng.com/
-  注册码: http://idea.goxz.gq/
-  iconfont: http://www.iconfont.cn/
   dryicons: http://dryicons.com/
 
 
@@ -233,7 +229,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 200
+  length: 150
 
 # Post meta display settings
 post_meta:
@@ -366,7 +362,7 @@ changyan:
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-#duoshuo_info:
+duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
@@ -539,17 +535,17 @@ vendors:
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
-
-
+  
+# SEO
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Assets
 css: css
 js: js
 images: images
 
-sitemap: 
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
 # Theme version
-#version: 5.1.0
+version: 5.1.1
