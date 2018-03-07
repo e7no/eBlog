@@ -5,7 +5,7 @@
 # Site
 title: RiceCongee's Notes
 subtitle: 
-description: 
+description: Stay Hungry,Stay Foolish
 author: 白粥
 language: zh-Hans
 timezone:
@@ -79,7 +79,10 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-  
+
+search:
+  path: search.xml
+  field: post
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
