@@ -129,7 +129,7 @@ scheme: Pisces
 social:
   GitHub: https://github.com/e7no || github
   E-Mail: mailto:hardi@126.com || envelope
-  微博: http://weibo.com/u/2103935810 || weibo
+  微博: https://weibo.com/u/2103935810 || weibo
   QQ: tencent://message/?uin=454720948&Site=message&Menu=yes || qq
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -420,16 +420,16 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-baidushare: true
+baidushare: false
 ##  type: button
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-jiathis: true
+jiathis: false
   #uid: 2158618
-add_this_id: 2158618
+#add_this_id: 2158618
 
 # Share
 #duoshuo_share: true

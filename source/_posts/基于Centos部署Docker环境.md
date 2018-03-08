@@ -4,8 +4,6 @@ date: 2017-03-02 14:11:59
 categories: Docker
 tags: [docker,centos]
 copyright: true
-photos: 
-    - "http://omdfpjss7.bkt.clouddn.com/17-3-6/88149926-file_1488780731850_b1c8.jpg"
 ---
 #### 拉取镜像 
 ```
