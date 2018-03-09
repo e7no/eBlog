@@ -88,7 +88,7 @@
 <meta property="og:description" content="Vagrant下载地址：https://www.vagrantup.com/downloads.html   VirtualBox下载地址：https://www.virtualbox.org/wiki/Downloads   VagrantBox镜像下载地址：http://www.vagrantbox.es/   执行终端: GitBash 或者 cmd1.安装软件先安装VirtualBox,">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img.e7no.com/18-3-9/58281156.jpg">
-<meta property="og:updated_time" content="2018-03-09T08:24:21.533Z">
+<meta property="og:updated_time" content="2018-03-09T08:28:55.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下用Vagrant搭建Linux开发环境">
 <meta name="twitter:description" content="Vagrant下载地址：https://www.vagrantup.com/downloads.html   VirtualBox下载地址：https://www.virtualbox.org/wiki/Downloads   VagrantBox镜像下载地址：http://www.vagrantbox.es/   执行终端: GitBash 或者 cmd1.安装软件先安装VirtualBox,">
@@ -402,7 +402,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://img.e7no.com/18-3-9/58281156.jpg" rel="gallery_cjejoefx40002so95zzvoa0sq"
+                 href="https://img.e7no.com/18-3-9/58281156.jpg" rel="gallery_cjejokrt90000f495b1rlaye5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://img.e7no.com/18-3-9/58281156.jpg" itemprop="contentUrl"/>
               </a>
@@ -431,12 +431,12 @@
 <h6 id="把下载的centos-6-8-x86-64-box复制到本目录-D-www-box下，执行"><a href="#把下载的centos-6-8-x86-64-box复制到本目录-D-www-box下，执行" class="headerlink" title="把下载的centos-6.8-x86_64.box复制到本目录 D:www/box下，执行"></a>把下载的centos-6.8-x86_64.box复制到本目录 D:www/box下，执行</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant box add centos6.8 centos-6.8-x86_64.box</span><br></pre></td></tr></table></figure>
 <h3 id="3-初始化Box"><a href="#3-初始化Box" class="headerlink" title="3.初始化Box"></a>3.初始化Box</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant init &#123;title&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="4-启动Box"><a href="#4-启动Box" class="headerlink" title="4.启动Box"></a>4.启动Box</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant up</span><br></pre></td></tr></table></figure>
-<h3 id="5-配置Vagrantfile"><a href="#5-配置Vagrantfile" class="headerlink" title="5.配置Vagrantfile"></a>5.配置Vagrantfile</h3><h5 id="常用配置："><a href="#常用配置：" class="headerlink" title="常用配置："></a>常用配置：</h5><ul>
-<li>box命名</li>
+<h3 id="5-配置Vagrantfile-常用配置"><a href="#5-配置Vagrantfile-常用配置" class="headerlink" title="5.配置Vagrantfile-常用配置"></a>5.配置Vagrantfile-常用配置</h3><ul>
+<li><h4 id="box命名"><a href="#box命名" class="headerlink" title="box命名"></a>box命名</h4></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.vm.box = &quot;centos6.7&quot;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>端口映射</li>
+<li><h4 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h4></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 80</span><br></pre></td></tr></table></figure>
 <ul>
@@ -444,14 +444,13 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">config.vm.network &quot;forwarded_port&quot;, guest: 87, host: 8087</span><br><span class="line">config.vm.network &quot;forwarded_port&quot;, guest: 88, host: 8088</span><br><span class="line">config.vm.network &quot;forwarded_port&quot;, guest: 89, host: 8089</span><br><span class="line">config.vm.network &quot;forwarded_port&quot;, guest: 3306, host: 33060</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>目录映射(可以不设置，默认将Linux下的vagrant共享到当前box目录)</p>
-</li>
+<li><h4 id="目录映射-可以不设置，默认将Linux下的vagrant共享到当前box目录"><a href="#目录映射-可以不设置，默认将Linux下的vagrant共享到当前box目录" class="headerlink" title="目录映射(可以不设置，默认将Linux下的vagrant共享到当前box目录)"></a>目录映射(可以不设置，默认将Linux下的vagrant共享到当前box目录)</h4></li>
 <li><p>[x]  <em>表示把本机的data目录共享到虚拟机里的/var/www目录</em></p>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.vm.synced_folder &quot;D:/www&quot;, &quot;/var/www/html&quot;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>ip设置</li>
+<li><h4 id="ip设置"><a href="#ip设置" class="headerlink" title="ip设置"></a>ip设置</h4></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.vm.network &quot;public_network&quot;,ip:&quot;192.168.56.1&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="6-重启vagrant加载新的配置项"><a href="#6-重启vagrant加载新的配置项" class="headerlink" title="6.重启vagrant加载新的配置项"></a>6.重启vagrant加载新的配置项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant reload</span><br></pre></td></tr></table></figure>
@@ -737,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#执行终端-GitBash-或者-cmd"><span class="nav-number">1.</span> <span class="nav-text">执行终端: GitBash 或者 cmd</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装软件"><span class="nav-number"></span> <span class="nav-text">1.安装软件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#先安装VirtualBox-然后安装Vagrant"><span class="nav-number"></span> <span class="nav-text">先安装VirtualBox,然后安装Vagrant</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-直接在线拉取镜像"><span class="nav-number"></span> <span class="nav-text">2.1 直接在线拉取镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#https-www-virtualbox-org-wiki-Downloads"><span class="nav-number"></span> <span class="nav-text">https://www.virtualbox.org/wiki/Downloads</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-或导入下载镜像"><span class="nav-number"></span> <span class="nav-text">2.2 或导入下载镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#把下载的centos-6-8-x86-64-box复制到本目录-D-www-box下，执行"><span class="nav-number">1.</span> <span class="nav-text">把下载的centos-6.8-x86_64.box复制到本目录 D:www/box下，执行</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-初始化Box"><span class="nav-number"></span> <span class="nav-text">3.初始化Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-启动Box"><span class="nav-number"></span> <span class="nav-text">4.启动Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-配置Vagrantfile"><span class="nav-number"></span> <span class="nav-text">5.配置Vagrantfile</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常用配置："><span class="nav-number"></span> <span class="nav-text">常用配置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-重启vagrant加载新的配置项"><span class="nav-number"></span> <span class="nav-text">6.重启vagrant加载新的配置项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-导出Box在其他机器上运行，免去重新部署"><span class="nav-number"></span> <span class="nav-text">7.导出Box在其他机器上运行，免去重新部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-其他命令解释"><span class="nav-number"></span> <span class="nav-text">8.其他命令解释</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#执行终端-GitBash-或者-cmd"><span class="nav-number">1.</span> <span class="nav-text">执行终端: GitBash 或者 cmd</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装软件"><span class="nav-number"></span> <span class="nav-text">1.安装软件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#先安装VirtualBox-然后安装Vagrant"><span class="nav-number"></span> <span class="nav-text">先安装VirtualBox,然后安装Vagrant</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-直接在线拉取镜像"><span class="nav-number"></span> <span class="nav-text">2.1 直接在线拉取镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#https-www-virtualbox-org-wiki-Downloads"><span class="nav-number"></span> <span class="nav-text">https://www.virtualbox.org/wiki/Downloads</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-或导入下载镜像"><span class="nav-number"></span> <span class="nav-text">2.2 或导入下载镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#把下载的centos-6-8-x86-64-box复制到本目录-D-www-box下，执行"><span class="nav-number">1.</span> <span class="nav-text">把下载的centos-6.8-x86_64.box复制到本目录 D:www/box下，执行</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-初始化Box"><span class="nav-number"></span> <span class="nav-text">3.初始化Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-启动Box"><span class="nav-number"></span> <span class="nav-text">4.启动Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-配置Vagrantfile-常用配置"><span class="nav-number"></span> <span class="nav-text">5.配置Vagrantfile-常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#box命名"><span class="nav-number"></span> <span class="nav-text">box命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#端口映射"><span class="nav-number"></span> <span class="nav-text">端口映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录映射-可以不设置，默认将Linux下的vagrant共享到当前box目录"><span class="nav-number"></span> <span class="nav-text">目录映射(可以不设置，默认将Linux下的vagrant共享到当前box目录)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ip设置"><span class="nav-number"></span> <span class="nav-text">ip设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-重启vagrant加载新的配置项"><span class="nav-number"></span> <span class="nav-text">6.重启vagrant加载新的配置项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-导出Box在其他机器上运行，免去重新部署"><span class="nav-number"></span> <span class="nav-text">7.导出Box在其他机器上运行，免去重新部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-其他命令解释"><span class="nav-number"></span> <span class="nav-text">8.其他命令解释</span></a></div>
             
 
           </div>
