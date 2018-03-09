@@ -4,6 +4,8 @@ date: 2017-03-02 14:11:59
 categories: Docker
 tags: [docker,centos]
 copyright: true
+photos: 
+    - "https://img.e7no.com/18-3-9/55849117.jpg"
 ---
 #### 拉取镜像 
 ```
