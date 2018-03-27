@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="e7no|白粥|曹阳洋|Eno|曹阳洋的个人博客|柒诺工作室" />
+  <meta name="keywords" content="SLB,SSL," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="Stay Hungry,Stay Foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RiceCongee&#39;s Notes">
-<meta property="og:url" content="https://e.e7no.com/categories/index.html">
+<meta name="description" content="负载均衡SLB转发443端口到服务器的80端口配置SSL  修改Nginx配置项  1vi /usr/local/nginx/conf/vhosts/xxx.conf  新增 fastcgi_param HTTPS 项  12345   location ~ .*\.php.*&amp;#123;        fastcgi_param HTTPS on; #attention!#         i">
+<meta name="keywords" content="SLB,SSL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="负载均衡下配置HTTPS">
+<meta property="og:url" content="https://e.e7no.com/2018/02/01/负载均衡下配置HTTPS/index.html">
 <meta property="og:site_name" content="RiceCongee&#39;s Notes">
-<meta property="og:description" content="Stay Hungry,Stay Foolish">
+<meta property="og:description" content="负载均衡SLB转发443端口到服务器的80端口配置SSL  修改Nginx配置项  1vi /usr/local/nginx/conf/vhosts/xxx.conf  新增 fastcgi_param HTTPS 项  12345   location ~ .*\.php.*&amp;#123;        fastcgi_param HTTPS on; #attention!#         i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-01T08:56:53.340Z">
+<meta property="og:image" content="https://img.e7no.com/18-3-27/3842615.jpg">
+<meta property="og:updated_time" content="2018-03-27T02:22:31.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RiceCongee&#39;s Notes">
-<meta name="twitter:description" content="Stay Hungry,Stay Foolish">
+<meta name="twitter:title" content="负载均衡下配置HTTPS">
+<meta name="twitter:description" content="负载均衡SLB转发443端口到服务器的80端口配置SSL  修改Nginx配置项  1vi /usr/local/nginx/conf/vhosts/xxx.conf  新增 fastcgi_param HTTPS 项  12345   location ~ .*\.php.*&amp;#123;        fastcgi_param HTTPS on; #attention!#         i">
+<meta name="twitter:image" content="https://img.e7no.com/18-3-27/3842615.jpg">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://e.e7no.com/categories/"/>
+  <link rel="canonical" href="https://e.e7no.com/2018/02/01/负载均衡下配置HTTPS/"/>
 
 
 
 
 
-  <title>分类 | RiceCongee's Notes</title>
+  <title>负载均衡下配置HTTPS | RiceCongee's Notes</title>
   
 
 
@@ -284,40 +287,278 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://e.e7no.com/2018/02/01/负载均衡下配置HTTPS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="白粥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RiceCongee's Notes">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 3 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTPS/">HTTPS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant/">Vagrant</a><span class="category-list-count">1</span></li></ul>
-            </div>
+          <h1 class="post-title" itemprop="name headline">负载均衡下配置HTTPS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T14:00:18+08:00">
+                2018-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTTPS/" itemprop="url" rel="index">
+                    <span itemprop="name">HTTPS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/02/01/负载均衡下配置HTTPS/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/02/01/负载均衡下配置HTTPS/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://img.e7no.com/18-3-27/3842615.jpg" rel="gallery_cjf91e6z700006o95tnrgp11e"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://img.e7no.com/18-3-27/3842615.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
           </div>
+        </div>
+      
+
+      
+        <blockquote>
+<h3 id="负载均衡SLB转发443端口到服务器的80端口配置SSL"><a href="#负载均衡SLB转发443端口到服务器的80端口配置SSL" class="headerlink" title="负载均衡SLB转发443端口到服务器的80端口配置SSL"></a>负载均衡SLB转发443端口到服务器的80端口配置SSL</h3></blockquote>
+<ol>
+<li>修改Nginx配置项</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/nginx/conf/vhosts/xxx.conf</span><br></pre></td></tr></table></figure>
+<ol>
+<li>新增 fastcgi_param HTTPS 项</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   location ~ .*\.php.*&#123; </span><br><span class="line">       fastcgi_param HTTPS on; #attention!#  </span><br><span class="line">       include php_fcgi.conf;</span><br><span class="line">       include pathinfo.conf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>该配置方式也可以用于开启Ecstore的HTTPS,配置完重启后需要执行cmd update.</p>
+</blockquote>
+
+      
+    </div>
+    <div>
+     
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------本文结束 <i class="fa fa-apple"></i> 感谢阅读------</div>
+    
+</div>
+     
+    </div>
+    <div>
+      
         
-      </div>
-      
-      
+<div class="my_post_copyright">
+  <script src="https://cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript"  src="https://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css">
+  <p><span>本文标题:</span><a href="/2018/02/01/负载均衡下配置HTTPS/">负载均衡下配置HTTPS</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 白粥 的个人博客">白粥</a></p>
+  <p><span>发布时间:</span>2018年02月01日 - 14:02</p>
+  <p><span>最后更新:</span>2018年03月27日 - 10:03</p>
+  <p><span>原始链接:</span><a href="/2018/02/01/负载均衡下配置HTTPS/" title="负载均衡下配置HTTPS">https://e.e7no.com/2018/02/01/负载均衡下配置HTTPS/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://e.e7no.com/2018/02/01/负载均衡下配置HTTPS/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial 4.0  </a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechat.jpg" alt="白粥 微信支付"/>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="白粥 支付宝"/>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SLB/" rel="tag"><i class="fa fa-tag"></i> SLB</a>
+          
+            <a href="/tags/SSL/" rel="tag"><i class="fa fa-tag"></i> SSL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/01/Windows下用Vagrant搭建Linux开发环境/" rel="next" title="Windows下用Vagrant搭建Linux开发环境">
+                <i class="fa fa-chevron-left"></i> Windows下用Vagrant搭建Linux开发环境
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -326,6 +567,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -346,8 +596,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -439,6 +698,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡SLB转发443端口到服务器的80端口配置SSL"><span class="nav-number">1.</span> <span class="nav-text">负载均衡SLB转发443端口到服务器的80端口配置SSL</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
