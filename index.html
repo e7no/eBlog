@@ -401,7 +401,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://img.e7no.com/18-3-27/3842615.jpg" rel="gallery_cjf91e6z700006o95tnrgp11e"
+                 href="https://img.e7no.com/18-3-27/3842615.jpg" rel="gallery_cjf91v0fo00008s95sio1lxn4"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://img.e7no.com/18-3-27/3842615.jpg" itemprop="contentUrl"/>
               </a>
@@ -425,7 +425,9 @@
 
 新增 fastcgi_param HTTPS 项
 
-12345   location ~ .*\.php.*
+12345   location ~ .*\.php.*&#123;        fastcgi_param HTTPS on; #attention!#         include php_fcgi.conf;       include pathinfo.conf;&#125;
+
+该配置方式也可以用于开启Ecstore的HTTPS,配置完重启后需要执行cmd up
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -591,7 +593,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://img.e7no.com/18-3-9/43077516.jpg" rel="gallery_cjf91e70a000a6o95dcnrj9cs"
+                 href="https://img.e7no.com/18-3-9/43077516.jpg" rel="gallery_cjf91v0g000068s950gm2ketk"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://img.e7no.com/18-3-9/43077516.jpg" itemprop="contentUrl"/>
               </a>
@@ -613,7 +615,10 @@ Vagrant下载地址：https://www.vagrantup.com/downloads.html
 VirtualBox下载地址：https://www.virtualbox.org/wiki/Downloads
 
 
-VagrantBox镜像下载地址：http://w
+VagrantBox镜像下载地址：http://www.vagrantbox.es/
+
+
+执行终端: GitBash 或者 cmd1.安装软件先安装VirtualBox,然后安装Vagrant2.1 直接在线拉取镜像https://www.virtualbox.org/wiki/Downloads备注：{title} box命名 {url} 镜像地址  （在线拉镜像速
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -779,7 +784,7 @@ VagrantBox镜像下载地址：http://w
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://img.e7no.com/18-3-9/55849117.jpg" rel="gallery_cjf91e70900096o95sled406f"
+                 href="https://img.e7no.com/18-3-9/55849117.jpg" rel="gallery_cjf91v0fv00028s95rciero4m"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://img.e7no.com/18-3-9/55849117.jpg" itemprop="contentUrl"/>
               </a>
@@ -796,7 +801,11 @@ VagrantBox镜像下载地址：http://w
           
           拉取镜像1docker pull centos:6.8
 将这个镜像启动成为一个容器,并映射端口1docker run -it -d --name www -p 33060:3306 -p 220:22 -p 8080:80 centos：6.8 /bin/bash
-查看创建的镜像
+查看创建的镜像1docker ps
+进入创建的镜像容器1docker exec -it &lt;container ID&gt; bash
+安装ifconfig1yum install net-tools –y
+安装ssh服务1yum install openssh*
+安装压缩解压缩1yum install -y unzip zip
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1005,6 +1014,14 @@ VagrantBox镜像下载地址：http://w
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
 
 
 
